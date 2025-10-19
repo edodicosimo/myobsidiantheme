@@ -1,13 +1,80 @@
+/* ==============================
+   THEME COLOR VARIABLES
+   ============================== */
+:root {
+  --lt-accentcolor: #4275f5;
+  --dt-accentcolor: #f5c242;
+}
+
 body {
 	--radius-s: 0px;
 	--radius-m: 0px;
 	--radius-l: 0px;
 	--input-radius: 0px;
 	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+	--checkbox-radius: 15px;
+	--clickable-icon-radius: 100vh;
+	--toggle-radius: 15px;
+	--toggle-thumb-radius: 15px;
+	--slider-thumb-radius: 15px;
+	--button-radius:5px;
+	--status-bar-radius:5px;
+
+	--tab-radius:5px;
+	/* checkboxes */
+	--checklist-done-decoration:none;
+	--checklist-done-color:rgb(from var(--text-normal) r g b / 0.5);
+
+	--h1-size: 2em;
+
+}
+body.theme-light {
+  --background-modifier-hover: rgb(from var(--dt-accentcolor) r g b / 0.8);
+  --background-modifier-border-hover: var(--dt-accentcolor);
+  
+  --color-accent: var(--lt-accentcolor);
+  --color-accent-1: var(--lt-accentcolor);
+  --color-accent-2: var(--lt-accentcolor);
+  --interactive-accent: var(--lt-accentcolor);
+  --interactive-accent-hover: var(--lt-accentcolor);
+
+  --accent-h: 227;
+  --accent-s: 91%;
+  --accent-l: 61%;
+  --accent-hsl: 227, 91%, 61%;	
+  
+  --text-selection:rgb(from var(--lt-accentcolor) r g b / 0.2); 
+
+  /* checkboxes */
+  --checkbox-border-color-hover:var(--lt-accentcolor);
+
+  /* headings */
+  --inline-title-color: var(--lt-accentcolor);
+
+}
+body.theme-dark {
+  --background-modifier-hover: rgb(from var(--lt-accentcolor) r g b / 0.8);
+  --background-modifier-border-hover: var(--lt-accentcolor);
+
+  --color-accent: var(--dt-accentcolor);
+  --color-accent-1: var(--dt-accentcolor);
+  --color-accent-2: var(--dt-accentcolor);
+  --interactive-accent: var(--dt-accentcolor);
+  --interactive-accent-hover: var(--dt-accentcolor);
+
+  --accent-h: 45;
+  --accent-s: 90%;
+  --accent-l: 65%;
+  --accent-hsl: 45, 90%, 65%;
+
+  --text-selection:rgb(from var(--dt-accentcolor) r g b / 0.2);
+
+    /* checkboxes */
+  --checkbox-border-color-hover:var(--dt-accentcolor);
+
+    /* headings */
+  --inline-title-color: var(--dt-accentcolor);
+
 }
 
 .workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
@@ -23,6 +90,7 @@ svg * {
 
 .menu {
 	padding: var(--size-2-1);
+	
 }
 
 .menu-item {
@@ -32,3 +100,7 @@ svg * {
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
 }
+
+
+
+
